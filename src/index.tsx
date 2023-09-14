@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import { TweetBox, Tweet } from './TweetBox';
-import { TweetBox } from './TweetBox';
+import { TweetBox, Tweet } from './TweetBox';
+import { Table } from './Table';
 import './TweetBox.css'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <TweetBox />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   {/* <App /> */}
+  // </React.StrictMode>
+
+  <Table />
 );
 
 // If you want to start measuring performance in your app, pass a function

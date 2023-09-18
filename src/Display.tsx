@@ -30,16 +30,12 @@ export const Display = () => {
 
   return (
     <>
-      {/* {tweets.map((tweet) => (
+      {tweets.map((tweet) => (
         <TweetBox
         tweet={tweet}
-        data-testid="tweet-box"
+        data-testid="tweet-box-display"
         />
-      ))} */}
-
-      {<TweetBox 
-        tweet={tweets[0]}
-        data-testid="tweet-box"/>}
+      ))}
     </>
   )
 };

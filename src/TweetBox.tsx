@@ -9,7 +9,7 @@ export const TweetBox: FC<{tweet: Tweet}> = ({tweet:{message}}) => {
   return (
     <div className={styles.container}>
       <div className={styles.whitebox}>
-        <div className={styles.tweet}>
+        <div data-testid="tweet-message" className={styles.tweet}>
           {message}
         </div>
         <div className={styles.privacy}>

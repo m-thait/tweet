@@ -42,7 +42,7 @@ describe("TweetBox JSON", () => {
         }
     ]
 
-    it("should render one record from JSON data successfully", () => {
+    it("should render from JSON data successfully", () => {
         const convertedTweet: Tweet[] = jsonData.map((tweet: {title: string; id: number; }) => (
             {message: tweet.title,
                   id: tweet.id}

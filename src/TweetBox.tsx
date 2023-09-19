@@ -1,15 +1,16 @@
-import { FC} from "react";
+import { FC } from "react";
 import styles from "./TweetBox.module.scss";
 
 export interface Tweet {
   message: string
+  id?: number //optional property
 }
 
-export const TweetBox: FC<{tweet: Tweet}> = ({tweet:{message}}) => {
+export const TweetBox: FC<{tweet: Tweet}> = ({tweet:{message}}, {tweet:id}) => {
   return (
     <div className={styles.container}>
       <div className={styles.whitebox}>
-        <div data-testid="tweet-message" className={styles.tweet}>
+        <div className={styles.tweet} data-testid="tweet-message" key={id}>
           {message}
         </div>
         <div className={styles.privacy}>
@@ -26,7 +27,9 @@ export const TweetBox: FC<{tweet: Tweet}> = ({tweet:{message}}) => {
           </div>
           <div className={styles.right}>
             <span className={styles.count}> 145 </span>
-            <button className="button"> Tweet </button>
+            <button className="button" data-testid="tweet-button">
+               Tweet
+            </button>
           </div>
         </div>
       </div>
